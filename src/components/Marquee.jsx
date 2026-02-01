@@ -1,11 +1,23 @@
 import React from 'react'
 import './Marquee.css'
-const skills = [{name: "C++", image:"cplusplus"}, {name: "JavaScript", image:"javascript"}, {name: "React", image:"react"}, {name: "TailwindCSS", image:"tailwind-css"}, {name: "HTML", image:"html"}, {name: "CSS", image:"css"}, {name: "PostgreSQL", image:"postgresql"}, {name: "Git", image:"git"}, {name: "Python", image:"python"}];
-function Box({prop}) {
+import { techStack } from './SkillBlocks'
+
+const marqueeSkills = [
+  "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "TailwindCSS"
+];
+
+function Box({techName}) {
+  const tech = techStack.find(t => t.name === techName) || { name: techName };
+  const Icon = tech.Icon;
+  
   return (
     <div className='flex justify-center items-center flex-col p-4 gap-2 h-20 w-20 md:h-30 md:w-30 text-center group/box'>
-        <img src={`/skills/${prop.image}.png`} alt={prop.name} className='h-8 md:h-10 w-auto grayscale group-hover/box:grayscale-30 duration-200 group-hover/box:scale-120 object-cover'/>
-        <div className='text-[var(--text-color)] text-sm group-hover/box:text-[var(--head-color)] group-hover/box:scale-110 duration-200'>{prop.name}</div>
+        {Icon ? (
+             <Icon className='h-8 md:h-10 w-auto grayscale group-hover/box:grayscale-30 duration-200 group-hover/box:scale-120 object-cover' style={{ color: tech.color }} />
+        ) : (
+            <div className='h-8 md:h-10 w-auto flex items-center justify-center text-xs'>No Icon</div>
+        )}
+        <div className='text-[var(--text-color)] text-sm group-hover/box:text-[var(--head-color)] group-hover/box:scale-110 duration-200'>{tech.name}</div>
     </div>
   )
 }
@@ -15,20 +27,20 @@ export const Marquee = () => {
         <div className='absolute top-0 left-0 h-full w-[100px] bg-linear-to-r from-[var(--bg-main)] to-transparent z-10'></div>
         <div className='absolute top-0 right-0 h-full w-[100px] bg-linear-to-l from-[var(--bg-main)] to-transparent z-10'></div>
             <div className='flex justify-center animate-marquee flex-row group-hover/marquee:[animation-play-state:paused]'>
-                {skills.map((element, index) => (
-                    <Box key={index} prop={element} />
+                {marqueeSkills.map((name, index) => (
+                    <Box key={index} techName={name} />
                 ))}
             </div>
 
             <div className='flex justify-center animate-marquee flex-row group-hover/marquee:[animation-play-state:paused]'>
-                {skills.map((element, index) => (
-                    <Box key={index} prop={element} />
+                {marqueeSkills.map((name, index) => (
+                    <Box key={index} techName={name} />
                 ))}
             </div>
             
             <div className='flex justify-center animate-marquee flex-row group-hover/marquee:[animation-play-state:paused]'>
-                {skills.map((element, index) => (
-                    <Box key={index} prop={element} />
+                {marqueeSkills.map((name, index) => (
+                    <Box key={index} techName={name} />
                 ))}
             </div>
         </div>

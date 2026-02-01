@@ -74,10 +74,10 @@ function App() {
               <div className='text-[var(--subtext-color)] text-sm md:text-md flex space-x-2'><div>Kushinagar, UP | </div><TypingEffect text={text} /></div>
           </div>
           <div className='flex md:justify-end md:gap-4 gap-2 md:mr-8'>
-            <a href='https://github.com/adityakushwahaksn' className='w-6 h-auto hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full'><img src="icons/github.png" alt="" className='invert-[var(--invert-value)] object-cover' /></a>
-            <a href='https://linkedin.com/in/adityakushwaha' className='w-6 h-auto hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full'><img src="icons/linkedin.png" alt="" className='invert-[var(--invert-value)] object-cover' /></a>
-            <a href='mailto:adityakushwahaksn@gmail.com' className='w-6 h-auto hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full'><img src="icons/x.png" alt="" className='invert-[var(--invert-value)] object-cover' /></a>
-            <a href='#' className='w-6 h-auto hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full' title='Resume'><img src="icons/resume.png" alt="" className='invert-[var(--invert-value)] object-cover' /></a>
+            <a href='https://github.com/adityakushwahaksn' target="_blank" rel="noopener noreferrer" className='w-6 h-auto hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full'><img src="icons/github.png" alt="" className='invert-[var(--invert-value)] object-cover' /></a>
+            <a href='https://linkedin.com/in/adityakushwaha' target="_blank" rel="noopener noreferrer" className='w-6 h-auto hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full'><img src="icons/linkedin.png" alt="" className='invert-[var(--invert-value)] object-cover' /></a>
+            <a href='mailto:adityakushwahaksn@gmail.com' target="_blank" rel="noopener noreferrer" className='w-6 h-auto hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full'><img src="icons/x.png" alt="" className='invert-[var(--invert-value)] object-cover' /></a>
+            <a href='#' target="_blank" rel="noopener noreferrer" className='w-6 h-auto hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full' title='Resume'><img src="icons/resume.png" alt="" className='invert-[var(--invert-value)] object-cover' /></a>
           </div>
         </div>
         </div>
@@ -111,7 +111,7 @@ function App() {
       </div>
       <div className='relative flex flex-col justify-center items-center mt-8 w-full md:w-3/4'>
         <div className='text-[var(--head-color)] font-instrument-serif text-3xl border-b-2 border-dashed border-purple-400'>
-          Tech Stack I use
+          Technologies & Tools
         </div>
         {/* the toggle button (doesnt look good imo, so commented for now) */}
         {/* <div className='relative grid grid-cols-2 border border-neutral-600 rounded-lg mt-4'>
