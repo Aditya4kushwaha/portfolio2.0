@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   SiJavascript,
   SiTypescript,
@@ -18,7 +17,9 @@ import {
   SiVercel,
   SiAmazonwebservices,
   SiPostman,
-  SiBun
+  SiBun,
+  SiMarkdown,
+  SiSocketdotio
 } from 'react-icons/si'
 
 export const techStack = [
@@ -41,6 +42,8 @@ export const techStack = [
   { name: 'CSS', Icon: SiCss3, color: '#1572B6' },
   { name: 'Git', Icon: SiGit, color: '#F05032' },
   { name: 'Python', Icon: SiPython, color: '#3776AB' },
+  { name: 'Markdown', Icon: SiMarkdown, color: '#000000', colorClass: 'dark:invert' },
+  { name: 'Socket.io', Icon: SiSocketdotio, colorClass: 'text-[var(--text-main)]' },
 ]
 
 export function Box({ prop, size, gap = 2 }) {

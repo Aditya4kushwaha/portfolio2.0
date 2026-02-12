@@ -1,23 +1,23 @@
-import React from 'react'
 import { techStack } from './SkillBlocks'
 
 const projects = [
     {
-        name: "Meme Centre",
-        image: "memecentre",
-        techStack: ["React", "JavaScript", "TailwindCSS"],
-        description: "An app displaying 50+ API-fetched memes and custom memes building, achieving 50+ users. Fully responsive design for seamless experience across all devices.",
-        liveDemoLink: "#",
-        githubLink: "https://github.com/adityakushwahaksn"
+        name: "Chit Chat",
+        image: "chitchat",
+        techStack: ["React", "JavaScript", "Tailwind CSS", "Node.js", "MongoDB","Express", "Socket.io"],
+        description: "A real-time chat application built with React and Node.js, featuring real-time messaging, user authentication, and a modern UI.",
+        liveDemoLink: "https://chat-app-three-inky-99.vercel.app/",  
+        githubLink: "https://github.com/Aditya4kushwaha/Chat-App"
     },
     {
-        name: "Crypto Hunter",
-        image: "cryptohunter",
-        techStack: ["React", "JavaScript", "TailwindCSS"],
-        description: "Real-time crypto tracker displaying top 10 coins with live pricing updates. Utilizes API calls to fetch and display real-time data dynamically.",
-        liveDemoLink: "#",
-        githubLink: "https://github.com/adityakushwahaksn"
-    }
+        name: "Meme Centre",
+        image: "memecentre",
+        techStack: ["React", "JavaScript", "Tailwind CSS"],
+        description: "Built a  meme generator app with a clean UI, allowing users to create custom memes without any mess in ui.",
+        liveDemoLink: "https://meme-generator-kappa-brown.vercel.app/",
+        githubLink: "https://github.com/Aditya4kushwaha/Meme-Generator"
+    },
+    
 ]
 
 export const Projects = () => {
@@ -34,9 +34,18 @@ export const Projects = () => {
                         const tech = techStack.find(t => t.name === techName) || { name: techName };
                         const Icon = tech.Icon;
                         return (
-                             <div key={idx} className='flex items-center gap-1 border border-[var(--border-color)] px-2 py-1 rounded-md text-sm text-[var(--text-color)]'>
-                                {Icon && <Icon style={{ color: tech.color }} />}
-                                <span>{tech.name}</span>
+                             <div key={idx} className='relative group/tooltip p-2 bg-[var(--hover-bg)] rounded-lg border border-transparent hover:border-[var(--border-color)] transition-all duration-200'>
+                                {Icon ? (
+                                    <Icon 
+                                        className={`w-5 h-5 ${tech.colorClass || ''}`} 
+                                        style={{ color: tech.color }} 
+                                    />
+                                ) : (
+                                    <span className="text-sm font-bold">{tech.name[0]}</span>
+                                )}
+                                <span className='absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-[var(--bg-main)] bg-[var(--text-main)] rounded opacity-0 group-hover/tooltip:opacity-100 transition-opacity whitespace-nowrap pointer-events-none'>
+                                    {tech.name}
+                                </span>
                             </div>
                         )
                     })}
@@ -52,7 +61,7 @@ export const Projects = () => {
                     </div>
                     <div className='group/button flex justify-center items-center gap-2 border border-[var(--subtext-color)] hover:bg-[var(--hover-bg)] p-1 rounded-md'>
                         <img src="icons/github.png" className='invert-[var(--invert-value)] h-5' alt="" />
-                        <a href={project.githubLink} className='text-[var(--subtext-color)] group-hover/button:text-[var(--text-color)]  text-sm duration-200'>GitHub</a>
+                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className='text-[var(--subtext-color)] group-hover/button:text-[var(--text-color)]  text-sm duration-200'>GitHub</a>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,7 @@
 import './App.css'
+import { SiX } from 'react-icons/si'
+import { MdEmail } from 'react-icons/md'
+import { IoDocumentText } from 'react-icons/io5'
 import { NavBar } from './components/NavBar'
 import { Marquee } from './components/Marquee'
 import { SpeedInsights } from "@vercel/speed-insights/react"
@@ -31,7 +34,7 @@ let education = [{
 {
   'degree': "CBSE Senior Secondary (Class XII)",
   'college': "Smt. Banni Devi Senior Secondary School, Kushinagar",
-  'duration': "2022"
+  'duration': "2020 - 2022"
 }]
 function App() {
   let text = ["Software Developer", "Freelancer", "Web Developer", "Competitive Programmer"];
@@ -74,10 +77,9 @@ function App() {
               <div className='text-[var(--subtext-color)] text-sm md:text-md flex space-x-2'><div>Kushinagar, UP | </div><TypingEffect text={text} /></div>
           </div>
           <div className='flex md:justify-end md:gap-4 gap-2 md:mr-8'>
-            <a href='https://github.com/adityakushwahaksn' target="_blank" rel="noopener noreferrer" className='w-6 h-auto hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full'><img src="icons/github.png" alt="" className='invert-[var(--invert-value)] object-cover' /></a>
-            <a href='https://linkedin.com/in/adityakushwaha' target="_blank" rel="noopener noreferrer" className='w-6 h-auto hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full'><img src="icons/linkedin.png" alt="" className='invert-[var(--invert-value)] object-cover' /></a>
-            <a href='mailto:adityakushwahaksn@gmail.com' target="_blank" rel="noopener noreferrer" className='w-6 h-auto hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full'><img src="icons/x.png" alt="" className='invert-[var(--invert-value)] object-cover' /></a>
-            <a href='#' target="_blank" rel="noopener noreferrer" className='w-6 h-auto hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full' title='Resume'><img src="icons/resume.png" alt="" className='invert-[var(--invert-value)] object-cover' /></a>
+            <a href='https://x.com/adityakush_04' target="_blank" rel="noopener noreferrer" className='w-6 h-6 hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full flex items-center justify-center'><SiX className='text-[var(--text-main)] w-4 h-4' /></a>
+            <a href='mailto:adityakushwahaksn@gmail.com' target="_blank" rel="noopener noreferrer" className='w-6 h-6 hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full flex items-center justify-center'><MdEmail className='text-[var(--text-main)] w-5 h-5' /></a>
+            <a href='https://drive.google.com/file/d/1eiLyq6tS-TBEK4fEbf3m1uVmrU1EwEDX/view?usp=sharing' target="_blank" rel="noopener noreferrer" className='w-6 h-6 hover:scale-120 duration-200 my-2 bg-[var(--border-color)] md:bg-transparent rounded-full flex items-center justify-center' title='Resume'><IoDocumentText className='text-[var(--text-main)] w-5 h-5' /></a>
           </div>
         </div>
         </div>
@@ -170,11 +172,10 @@ function App() {
           Feel free to reach out for collaborations or just a friendly chat.
         </p>
         <div className='flex flex-wrap justify-center gap-4'>
-            <SocialBox name="GitHub" image="github.png" invert={true} link="https://github.com/adityakushwahaksn" />
-            <SocialBox name="LinkedIn" image="linkedin.png" invert={true} link="https://linkedin.com/in/adityakushwaha" />
-            <SocialBox name="Resume" image="resume.png" invert={true} link="#" />
-            <SocialBox name="LeetCode" image="leetcode.png" invert={false} link="https://leetcode.com/u/adityakushwahaksn" />
-            <SocialBox name="CodeForces" image="codeforces.webp" invert={false} link="https://codeforces.com/profile/adityakushwahaksn" />
+            <SocialBox name="GitHub" image="github.png" invert={true} link="https://github.com/Aditya4kushwaha" />
+            <SocialBox name="LinkedIn" image="linkedin.png" invert={true} link="https://linkedin.com/in/aadi2005" />
+            <SocialBox name="LeetCode" image="leetcode.png" invert={false} link="https://leetcode.com/u/aadi_kush/" />
+            <SocialBox name="CodeForces" image="codeforces.webp" invert={false} link="https://codeforces.com/profile/aadi_kush" />
             <SocialBox name="CodeChef" image="codechef.webp" invert={true} link="https://www.codechef.com/users/adityakushwahaksn" />
 
         </div>
