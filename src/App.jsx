@@ -176,7 +176,7 @@ function App() {
             <SocialBox name="LinkedIn" image="linkedin.png" invert={true} link="https://linkedin.com/in/aadi2005" />
             <SocialBox name="LeetCode" image="leetcode.png" invert={false} link="https://leetcode.com/u/aadi_kush/" />
             <SocialBox name="CodeForces" image="codeforces.webp" invert={false} link="https://codeforces.com/profile/aadi_kush" />
-            <SocialBox name="CodeChef" image="codechef.webp" invert={true} link="https://www.codechef.com/users/adityakushwahaksn" />
+            <SocialBox name="CodeChef" image="codechef.webp" invert={true} link="https://www.codechef.com/users/aadi_kush" />
 
         </div>
       </div>
